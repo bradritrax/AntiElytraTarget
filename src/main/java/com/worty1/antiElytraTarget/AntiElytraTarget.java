@@ -80,25 +80,25 @@ public final class AntiElytraTarget extends JavaPlugin implements Listener {
         cache.debug = getConfig().getBoolean("ayarlar.debug", false);
 
         cache.msgWarning = color(getConfig().getString("mesajlar.uyari",
-                "&c&l[!] &eSürekli slot değişimi tespit edildi! &7(%sayac%/%max%)"));
+                "&c[!] &fÇok Hızlı Slot Değişimi Tespit Edildi! Eğer Hilen Varsa Kapat Lütfen. &7(%sayac%/%max%)"));
         cache.msgPunished = color(getConfig().getString("mesajlar.ceza",
-                "&c&l[CEZA] &4PvP yetkiniz kaldırıldı! &7(%sure% saniye)"));
+                "&8[&cCeza] &fPvP Yetkiniz Geçici Olarak Kaldırıldı! &7(%sure% sn)"));
         cache.msgPunishEnded = color(getConfig().getString("mesajlar.ceza-bitti",
-                "&aCeza süreniz bitti."));
+                "&8[&cAntiElytraTarget&8] &aCeza Süreniz Doldu, Tekrar PvP Atabilirsiniz."));
         cache.msgCannotAttack = color(getConfig().getString("mesajlar.saldiri-yasak",
-                "&cCeza süreniz dolmadan saldıramazsınız! &7(%kalan% sn)"));
+                "&8[&cAntiElytraTarget&8] &cCeza Süreniz Dolmadan Saldıramazsınız! &7(%kalan% sn)"));
         cache.msgFireworkBlock = color(getConfig().getString("mesajlar.havai-fisek-yasak",
-                "&cElytra ile uçarken havai fişekle vuramazsın!"));
+                "&8[&cAntiElytraTarget&8] &cElytra İle Uçarken Havai Fişekle Vuramazsın!"));
         cache.msgStaffAlert = color(getConfig().getString("mesajlar.yetkili-uyari",
-                "&c&l[AntiElytra] &e%oyuncu% &7slot spam! &c[%sayac%/%max%]"));
-        cache.msgNoPerm = color(getConfig().getString("mesajlar.yetki-yok", "&cYetkin yok!"));
-        cache.msgReload = color(getConfig().getString("mesajlar.yenilendi", "&aYenilendi!"));
-        cache.msgNotFound = color(getConfig().getString("mesajlar.bulunamadi", "&cOyuncu yok!"));
+                "&8[&cAntiElytraTarget&8] &b%oyuncu% &fElytra Target Şüphesi Var! &c[%sayac%/%max%]"));
+        cache.msgNoPerm = color(getConfig().getString("mesajlar.yetki-yok", "&cBunu Yapmak İçin Yetkiniz Bulunmamaktadır!"));
+        cache.msgReload = color(getConfig().getString("mesajlar.yenilendi", "&aConfig Başarıyla Yenilendi!"));
+        cache.msgNotFound = color(getConfig().getString("mesajlar.bulunamadi", "&cOyuncu bulunamadı!"));
         cache.msgCleared = color(getConfig().getString("mesajlar.temizlendi", "&aVeriler temizlendi!"));
 
-        cache.effectLightning = getConfig().getBoolean("efektler.yildirim", true);
+        cache.effectLightning = getConfig().getBoolean("efektler.yildirim", false);
         cache.effectSound = getConfig().getBoolean("efektler.ses", true);
-        cache.effectParticle = getConfig().getBoolean("efektler.partikul", true);
+        cache.effectParticle = getConfig().getBoolean("efektler.partikul", false);
     }
 
     @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)

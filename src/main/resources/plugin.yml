@@ -3,14 +3,14 @@ version: '1.0.0'
 main: com.worty1.antiElytraTarget.AntiElytraTarget
 api-version: '1.21'
 author: Worty1
-description: 'Performans odaklı Elytra Target koruması'
+description: 'Elytra Target Koruma Plugini'
 
 commands:
   antielytratarget:
     description: Ana komut
     aliases: [aet, antielytra]
     permission: aet.use
-    usage: /aet <yenile|durum|temizle>
+    usage: /aet <alt komut>
 
 permissions:
   aet.use:
@@ -18,12 +18,12 @@ permissions:
 
   aet.alert:
     default: op
-    description: Şüpheli aktivite bildirimleri
+    description: Şüpheli Durum Bildirimleri
 
   aet.admin:
     default: op
-    description: Admin komutları
+    description: Admin Komutları
 
   aet.bypass:
     default: false
-    description: Tespitten muaf (VERMEYİN!)
+    description: Bu Perme Sahip Oyuncular Tespitten Muaf Olur

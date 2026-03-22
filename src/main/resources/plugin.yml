@@ -1,7 +1,7 @@
 name: AntiElytraTarget
 version: '1.0.0'
 main: com.worty1.antiElytraTarget.AntiElytraTarget
-api-version: '1.21'
+api-version: '1.17'
 author: Worty1
 description: 'Elytra Target Koruma Plugini'
 

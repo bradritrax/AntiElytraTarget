@@ -188,7 +188,7 @@ public final class AntiElytraTarget extends JavaPlugin implements Listener {
             world.playSound(loc, Sound.ENTITY_LIGHTNING_BOLT_IMPACT, 1f, 1f);
         }
         if (cache.effectParticle) {
-            world.spawnParticle(Particle.SMOKE, loc.add(0, 1, 0), 50, 0.5, 0.5, 0.5, 0.1);
+            world.spawnParticle(Particle.SMOKE_NORMAL, loc.add(0, 1, 0), 50, 0.5, 0.5, 0.5, 0.1);
         }
 
         sendDiscord("🔨 **Ceza**: " + player.getName() + " (" + violations + " ihlal)");
@@ -258,7 +258,7 @@ public final class AntiElytraTarget extends JavaPlugin implements Listener {
                 attacker.playSound(attacker.getLocation(), Sound.BLOCK_ANVIL_LAND, 1f, 0.5f);
             }
             if (cache.effectParticle) {
-                attacker.getWorld().spawnParticle(Particle.SMOKE,
+                attacker.getWorld().spawnParticle(Particle.SMOKE_NORMAL,
                         attacker.getLocation().add(0, 1, 0), 30, 0.4, 0.6, 0.4, 0);
             }
         }
